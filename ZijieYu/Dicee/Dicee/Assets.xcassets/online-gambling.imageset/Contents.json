@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "diceeLogo.png",
+      "filename" : "online-gambling.jpg",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "diceeLogo@2x.png",
+      "filename" : "online-gambling@2x.jpg",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "diceeLogo@3x.png",
+      "filename" : "online-gambling@3x.jpg",
       "scale" : "3x"
     }
   ],
