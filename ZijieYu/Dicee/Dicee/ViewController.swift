@@ -12,18 +12,28 @@ class ViewController: UIViewController {
     
     let diceArray = ["dice1", "dice2", "dice3", "dice4", "dice5", "dice6"]
     
+    let background = ["background", "background_2"]
+    
     var randomDiceIndex1: Int = 0
     var randomDiceIndex2: Int = 0
-
+    var randomBackground: Int = 0
+    @IBOutlet weak var BackgroundColor: UIImageView!
     @IBOutlet weak var diceImageView1: UIImageView!
     @IBOutlet weak var diceImageView2: UIImageView!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         updateDiceImages()
     }
-
+    
+    
+    @IBAction func Background(_ sender: UIButton) {
+        updateBackground()
+    }
+    
+    
     @IBAction func rollButtonPressed(_ sender: UIButton) {
         
         updateDiceImages()
@@ -34,6 +44,11 @@ class ViewController: UIViewController {
     }
     
 
+    
+    func updateBackground(){
+        randomBackground = Int .random(in: 0...1)
+        BackgroundColor.image = UIImage (named:background[randomBackground])
+    }
     
     func updateDiceImages() {
         
