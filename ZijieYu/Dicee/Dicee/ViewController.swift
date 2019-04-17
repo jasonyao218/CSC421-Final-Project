@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     var randomDiceIndex1: Int = 0
     var randomDiceIndex2: Int = 0
     var randomBackground: Int = 0
+    var count = 0;
     @IBOutlet weak var BackgroundColor: UIImageView!
     @IBOutlet weak var diceImageView1: UIImageView!
     @IBOutlet weak var diceImageView2: UIImageView!
@@ -46,8 +47,11 @@ class ViewController: UIViewController {
 
     
     func updateBackground(){
-        randomBackground = Int .random(in: 0...1)
-        BackgroundColor.image = UIImage (named:background[randomBackground])
+//        randomBackground = Int .random(in: 0...1)
+//        BackgroundColor.image = UIImage (named:background[randomBackground])
+        
+        BackgroundColor.image = UIImage (named:background[count%2])
+        count += 1
     }
     
     func updateDiceImages() {
