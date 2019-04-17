@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     
     let diceArray = ["dice1", "dice2", "dice3", "dice4", "dice5", "dice6"]
     
-    let background = ["background", "background_2"]
+    let background = ["background", "background_2", "background_3", "background_4", "background_5"]
     
     var randomDiceIndex1: Int = 0
     var randomDiceIndex2: Int = 0
@@ -50,8 +50,11 @@ class ViewController: UIViewController {
 //        randomBackground = Int .random(in: 0...1)
 //        BackgroundColor.image = UIImage (named:background[randomBackground])
         
-        BackgroundColor.image = UIImage (named:background[count%2])
+        BackgroundColor.image = UIImage (named:background[count])
         count += 1
+        if count == 4 {
+            count = 0
+        }
     }
     
     func updateDiceImages() {
