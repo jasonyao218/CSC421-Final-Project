@@ -67,7 +67,13 @@ class ViewController: UIViewController {
         diceImageView1.image = UIImage (named: diceArray[randomDiceIndex1])
         
         diceImageView2.image = UIImage (named: diceArray[randomDiceIndex2])
+        
+        if diceImageView1.image == UIImage (named: diceArray[5]){
+        if diceImageView2.image == UIImage (named: diceArray[5]) {
+            print("you win")
+        }
     }
     
 }
 
+}
